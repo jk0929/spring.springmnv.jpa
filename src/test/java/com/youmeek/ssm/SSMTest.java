@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Ignore
+//@Ignore
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath*:spring/applicationContext*.xml"})
 public class SSMTest {
@@ -27,15 +27,14 @@ public class SSMTest {
 	
 	@Test
 	public void testQuery() {
-		SysUser sysUser = sysUserService.getById(1L);
+//		SysUser sysUser = sysUserService.getById(1L);
 		SysUser sysUser2 = sysUserService.findBySysUserId(1L);
 		SysUser sysUser3 = sysUserService.findBySysUserLoginName("YouMeek4");
 		List<SysUser> sysUserList1 = sysUserService.findDistinctSysUserBySysUserLoginNameOrSysUserId("YouMeek5", 3L);
-		System.out.println("--------------------------------" + sysUser.toString());
+//		System.out.println("--------------------------------" + sysUser.toString());
 		System.out.println("--------------------------------" + sysUser2.toString());
 		System.out.println("--------------------------------" + sysUser3.toString());
 		System.out.println("--------------------------------" + sysUserList1.toString());
-		
 	}
 	
 	@Test
@@ -100,10 +99,10 @@ public class SSMTest {
 		List<SysUser> sysUserList = new ArrayList<>();
 		
 		SysUser sysUser1 = new SysUser();
-		sysUser1.setSysUserId(10L);
+		sysUser1.setSysUserId(8L);
 		
 		SysUser sysUser2 = new SysUser();
-		sysUser2.setSysUserId(11L);
+		sysUser2.setSysUserId(9L);
 		
 		sysUserList.add(sysUser1);
 		sysUserList.add(sysUser2);
